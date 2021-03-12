@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
   public marketBriefingData;
   isPositive: boolean;
   public sectorPerfomanceImageOne = [];
+  public sectorPerfomanceImageTwo = [];
+  public sectorHighlight = [];
 
   public earnings = [];
 
@@ -42,20 +44,38 @@ export class HomeComponent implements OnInit {
 
   getSectorPerfImages() {
     this.sectorPerfomanceImageOne = this._marketBriefingService.sectorPerformanceImageOne;
+    this.sectorPerfomanceImageTwo = this._marketBriefingService.sectorPerformanceImageTwo;
+    this.sectorHighlight = this._marketBriefingService.sectorHighlight;
   }
 
  // this method gets the market briefing data from the data service
-  
+
   getMarketBriefing() {
     this.marketBriefingData = this._marketBriefingService.getMarketBriefing();
+    this.marketBriefingData.filter((item) => {
+      let percentage = parseFloat(item.percentage);
+      if(percentage >= 0 ){
+        this.isPositive = true;
+        console.log(`this is true: `, percentage);
+      }
+
+      if(percentage < 0 ) {
+        this.isPositive = false;
+        console.log( `this is for false: `, percentage);
+      }
+    })
   }
 
-  comparePercentageValue(value) {
-    if(value > 0){
-      this.isPositive = true;
-    } 
-    if(value < 0) {
-      this.isPositive = false;
+
+  // this method is used to determine the value of the percentage in order to change it color
+
+  compareValue(value) {
+    let myvalue = parseFloat(value);
+    if(myvalue > 0 ) {
+      return 'green';
+    }
+    if(myvalue < 0) {
+      return 'red';
     }
   }
 

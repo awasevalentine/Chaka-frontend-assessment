@@ -1,35 +1,42 @@
 <div class="home-content-wrapper container">
     <div class="container-fluid">
+
+      <!-- Market View section-->
+
         <div class="header-one">
             <p class="market-view"><span>MARKET VIEW</span>
                 <br>
                     <b style="font-size: 25px;">Today's market briefing.</b>
             </p>
         </div>
-    <div class="row market-card-wrapper">
+    <div class="market-card-wrapper">
         <div class="col-sm-equal col-md-equal col-lg-equal column-wrapper"  *ngFor="let briefing of marketBriefingData" >
-            <div class="p-2 border bg-light">
+            <div class="p-2 border bg-light market-card">
+              <div  class="org-wrapper">
                 <p>
                     <b>{{briefing.organizationName}}</b>
                     <br>
                     <span style="font-size: 11px;">{{briefing.description}}</span>
                     <br>
                 </p>
+              </div>
                 <div class="pt-stockprice">
                     {{briefing.stockPrice}}
                     <br>
-                    <span class="pt-percentage">
-                    {{briefing.percentage | percent}}
+                    <span class="pt-percentage" [style.color] = "compareValue(briefing.percentage)">
+                    {{briefing.percentage}}%
                     </span>
                 </div>
             </div>
         </div>
+        <div class="footer-wrapper mt-1">
+          Active stocks last updated Dec 29 2020
+      </div>
     </div>
-    
-    <div class="footer-wrapper mt-1">
-            Active stocks last updated Dec 29 2020
-    </div>
-    <div class="row mt-3" style="padding-left: 0 !important;">
+
+    <!--Sector Highligt section-->
+
+    <div class="row mt-3">
         <div class="col-sm-12 col-md-9 sector-highlight-wrapper">
             <p>
                 <span class="sector-one">
@@ -40,15 +47,10 @@
                     Active stocks last updated Dec 29 2020
                 </span>
             </p>
-        <div class="col-sector-view">
-            <img src="../../../assets/sector-highlight/entertainment-so-real_web.jpg" class="img-fluid w-100" alt="Health Care">
-            <div class="header-top">Health Care</div>
-            <div class="footer-bottom">+{{0.46 | percent: '0.2'}}</div>
-        </div>
-        <div class="col-sector-view">
-            <img src="../../../assets/sector-highlight/music-to-life_web.jpg" class="img-fluid w-100"  alt="Industrials">
-            <div class="header-top">Industrials</div>
-            <div class="footer-bottom">{{-0.78 | percent: '0.2'}}</div>
+        <div class="col-sector-view" *ngFor="let sectorImage of sectorHighlight">
+            <img src="{{sectorImage.image}}" class="img-fluid" alt="Health Care" width="100px">
+            <div class="header-top">{{sectorImage.title}}</div>
+            <div class="footer-bottom" [style.backgroundColor] = "compareValue(sectorImage.percentage)">{{sectorImage.percentage}}%</div>
         </div>
         </div>
         <div class="col-sm-12 col-md-3 my-watch-wrapper">
@@ -56,27 +58,28 @@
                 My watchlist <i class="fa fa-star" aria-hidden="true"></i>
             </h3>
             <p>
-                Your watchlist is empty. Build your watchlist 
+                Your watchlist is empty. Build your watchlist
                 by starring (<i class="fa fa-star text-primary"></i>) the stocks you want to follow.
             </p>
         </div>
 
     </div>
 
-    <!-- this is for the  dividens-->
+
+    <!-- Ex-dividens section-->
 
     <div class="ex-dividens-wrapper">
         <h3>
             <b>Ex-Dividends</b>
         </h3>
         <div class="sub-content">
-            <p> 
+            <p>
                 Symbol
                 <span class="mount">Amount</span>
             </p>
         </div>
     </div>
-    <p style="font-size: 10px;">There are no upcoming dividens.</p>
+    <p class="upcoming-wrapper" style="font-size: 10px;">There are no upcoming dividens.</p>
 
 
      <!-- this is for the  Earnings-->
@@ -90,6 +93,7 @@
          </div>
      </div>
 
+
      <!--sector performance-->
 
      <div class="sector-performance-wrapper">
@@ -102,7 +106,12 @@
         <div class="col-sector-performance" *ngFor="let sector of sectorPerfomanceImageOne">
             <img src="{{sector.image}}" alt="sector Performance">
             <div class="header-top">{{sector.name}}</div>
-            <div class="footer-bottom">+{{sector.percentage | percent}}</div>
+            <div class="footer-bottom" [style.backgroundColor] = "compareValue(sector.percentage)" >{{sector.percentage}}%</div>
+        </div>
+        <div class="col-sector-performance-2" *ngFor="let sectorTwo of sectorPerfomanceImageTwo">
+          <img src="{{sectorTwo.image}}" alt="Section Two">
+          <div class="header-top">{{sectorTwo.name}}</div>
+          <div class="footer-bottom" [style.backgroundColor] = "compareValue(sectorTwo.percentage)">{{sectorTwo.percentage}}%</div>
         </div>
      </div>
 

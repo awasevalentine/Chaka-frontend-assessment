@@ -1,1 +1,20 @@
-<p>news works!</p>
+<div class="main-wrapper">
+  <div class="container mt-5 pb-5">
+    <h1 class="mt-3">News</h1>
+
+    <div class="row news" *ngFor="let sector of newsData">
+      <div class="col-md-5 col-image">
+        <img src="{{sector.image}}" alt="sector Performance">
+      </div>
+      <div class="col-md-7 col-data">
+       <span class="date"> {{sector.date}} </span>
+       <br>
+       <h3>{{sector.title}}</h3>
+       <p>
+         {{sector.description}}
+       </p>
+       <span>Related:  <a href=""> {{sector.url}} </a></span>
+      </div>
+    </div>
+  </div>
+</div>

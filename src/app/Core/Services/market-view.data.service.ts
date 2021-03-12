@@ -7,7 +7,7 @@ import { MarketBriefingData } from "../Models/market-briefing.model";
     providedIn: 'root'
   })
 export class MarketViewData {
-  
+
  public earnings = ['Symbol', 'Company', 'Fiscal Period', 'Consensus Estimated EPS', 'Actual EPS', 'Suprise', 'EPS, Year Ago', '%Change From Last Year']
 
   public marketBriefing = [
@@ -41,18 +41,30 @@ export class MarketViewData {
     {
       organizationName: 'GE', description: 'General Electric Co.', stockPrice: 10.59, percentage: '-0.47'
     }
-  
+
   ];
 
   public sectorPerformanceImageOne = [
-    { name: 'Health Care ', percentage: +0.46, image: "../../../assets/sector-highlight/FB_IMG_15460029711428678.jpg"},
-    { name: 'Comunication Services', percentage: 0.00, image: "./../../assets/sector-highlight/music-to-life_web.jpg" },
-    { name: 'Utilites', percentage: -0.07, image: "./../../assets/sector-highlight/FB_IMG_15398698920616402.jpg"},
-    { name: 'consumer discretionary', percentage: -0.07, image: "./../../assets/sector-highlight/entertainment-so-real_web.jpg" },
-     { name: 'Health Care ', percentage: -0.33, image: "./../../assets/sector-highlight/FB_IMG_15460029711428678.jpg"},
-    { name: 'Comunication Services', percentage: -0.38, image: "./../../assets/sector-highlight/music-to-life_web.jpg" },
-    { name: 'Utilites', percentage: -0.42, image: "./../../assets/sector-highlight/FB_IMG_15398698920616402.jpg"},
-    { name: 'consumer discretionary', percentage: -0.51, image:"./../../assets/sector-highlight/entertainment-so-real_web.jpg"}
+    { name: 'Health Care ', percentage: '+0.46', image: "../../../assets/sector-highlight/health-care.jpg"},
+    { name: 'Comunication Services', percentage: '0.00', image: "./../../assets/sector-highlight/communication-service.jpg" },
+    { name: 'Utilites', percentage: '-0.07', image: "../../../assets/sector-highlight/sport.jpg"},
+    { name: 'consumer Discretionary', percentage: '-0.07', image: "./../../assets/sector-highlight/materials.jpg" },
+     { name: 'Financials ', percentage: '-0.33', image: "../../../assets/sector-highlight/financial.jpg"},
+    { name: 'Consumer Staples', percentage: '-0.38', image: "../../../assets/sector-highlight/materials.jpg" },
+    { name: 'Materials', percentage: '-0.42', image: "../../../assets/sector-highlight/materials.jpg"},
+    { name: 'Technology', percentage: '-0.51', image:"../../../assets/sector-highlight/technology.jpg"}
+  ]
+
+  public sectorPerformanceImageTwo = [
+    { name: 'Real Estate ', percentage: '-0.55', image: "../../../assets/sector-highlight/real-estate.jpg"},
+    { name: 'Energy ', percentage: '-0.55', image: "../../../assets/sector-highlight/energy.jpg"},
+    { name: 'Industrials ', percentage: '-0.78', image: "../../../assets/sector-highlight/industrials.jpg"},
+  ]
+
+
+  public sectorHighlight = [
+    { title: 'Health Care', percentage: '+0.46', image: "../../../assets/sector-highlight/health-care.jpg" },
+    { title: 'Industrials', percentage: '-0.78', image: "../../../assets/sector-highlight/industrials.jpg" }
   ]
 
 

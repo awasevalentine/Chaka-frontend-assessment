@@ -3,31 +3,32 @@
     height: 100%;
 }
 
-.p-2 p{
-    line-height: 15px;
+/* market section */
+.pt-stockprice {
+  text-align: end;
+  padding-bottom: 0!important;
+  line-height: 15px;
+  height: 50%;
+  margin-top: 2em;
 }
 
-.header-one{
-    display: inline-block;
-    line-height: 20px !important;
+.market-card p{
+  line-height: 15px;
+  padding: 5px;
 }
-.market-card-wrapper {
-    padding: 2px !important;
+.org-wrapper{
+  height: 50%;
 }
-.column-wrapper div{
+
+.market-card{
     height: 170px !important;
 }
 
 .footer-wrapper, .sector-two {
     font-size: 10px;
-}
+} /* end of market section*/
 
-.pt-stockprice {
-    padding-top: 5em;
-    text-align: end;
-    padding-bottom: 0!important;
-    line-height: 15px;
-}
+
 
 
 .pt-subheader {
@@ -46,152 +47,208 @@
 
 /* sector view column divison */
 
+
+.sector-highlight-wrapper {
+  width: 100%;
+  line-height: 16px ;
+  padding-top: 20px;
+  border-top: solid 1px silver;
+
+}
+
+.sector-one, .my-watch-wrapper h3{
+  font-size: 18px;
+  font-weight: bold;
+}
 .col-sector-view {
     position: relative;
     min-height: 1px;
     padding: 5px;
-    
-}
+    color: white;
 
-.row-view {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
 }
-
-.sector-highlight-wrapper {
-    width: 100%;
-    line-height: 16px ;
-    padding-top: 20px;
-    border-top: solid 1px silver;
-}
-
-.sector-one, .my-watch-wrapper h3{
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .my-watch-wrapper {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .my-watch-wrapper p {
-    line-height: 16px;
-}
-
-
-/* sector Performance column division */
-
-.col-sector-performance {
-    position: relative;
-    min-height: 1px;
-    padding: 7px;
-}
-
-.sector-performance-wrapper {
-    margin-top: 4.5em;
-    border-top: solid 1px silver;
-    padding-top: 8px;
-
-}
-
-.sector-performance-wrapper span {
-    font-size: 18px;
-    font-weight: bolder;
-    
-}
-
-.performance-header {
-    line-height: 16px;
-   
-}
-
-.sector-performance-wrapper p {
-    font-size: 10px;
-}
-
-.col-sector-performance img {
-    height: 100px !important;
-    width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 2px;
-    
-}
-
-/*earnings column division */
-
-.earnings-wrapper {
-    font-size: 10px;
-    padding-top: 4px;
-    margin-top: 4em;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    padding-bottom: 0 !important;
-}
-
-.earnings-wrapper ul {
-    list-style-type: none;
-}
-
-.earnings-wrapper h4 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.earnings-equal ul {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-ul:first-child {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
+  line-height: 16px;
 }
 
 .col-sector-view img {
-    height: 100px  !important;
-    max-width: 100%;
-    border-radius: 4px;
+  height: 100px !important;
+  width: 100%;
+  max-height: 100px;
+  max-width: 100%;
+  border-radius: 2px;
+  object-fit: cover;
 
 }
 
 .col-sector-view:first-child{
     padding-left: 0 !important;
 }
+/*end of sector view section */
 
-.header-top {
-    position: absolute;
-    top: 8px;
-    left: 16px
-}
 
-.footer-bottom {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    background-color: green;
-    padding-left: 20px;
-}
 
-.row-view .header-top .footer-bottom {
-    background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-}
+/* Ex-dividens section */
 
 .ex-dividens-wrapper {
-    padding-top: 5px;
-    border-top: solid 1px silver ;
-    border-bottom: solid 1px silver ;
-    margin-top: 30px;
-    padding-left: 0 !important;
-    width: 73%;
+  padding-top: 5px;
+  border-top: solid 1px silver ;
+  border-bottom: solid 1px silver ;
+  margin-top: 30px;
+  padding-left: 0 !important;
+  width: 73%;
 }
 
 .sub-content span{
-    float: right
+  float: right
+}
+/*end of ex-dividens-wrapper section */
+
+
+
+/*earnings column division */
+
+.earnings-wrapper {
+  font-size: 12px;
+  padding-top: 4px;
+  margin-top: 4em;
+  border-top: solid 1px silver;
+  border-bottom: solid 1px silver;
+  padding-bottom: 0 !important;
 }
 
+.earnings-wrapper ul {
+  list-style-type: none;
+}
+
+.earnings-wrapper h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.earnings-equal ul, .sub-content p {
+  margin-bottom: 0 !important;
+}
+/*end of earning section */
+
+
+
+/* sector Performance column division */
+
+
+.sector-performance-wrapper {
+  margin-top: 4.5em;
+  border-top: solid 1px silver;
+  padding-top: 8px;
+  padding-bottom: 400px;
+  padding-left: 0 !important;
+
+}
+.performance-header {
+  line-height: 16px;
+
+}
+.col-sector-performance {
+    position: relative;
+    min-height: 1px;
+    padding: 7px;
+    color: white;
+}
+
+.col-sector-performance-2 {
+  position: relative;
+  min-height: 1px;
+  padding: 7px;
+  color: white;
+}
+.col-sector-performance img {
+  height: 100px !important;
+  width: 100%;
+  max-height: 100px;
+  max-width: 250px;
+  border-radius: 2px;
+  object-fit: cover;
+
+}
+
+.col-sector-performance-2 img {
+height: 100px !important;
+  width: 100%;
+  max-height: 100px;
+  max-width: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.sector-performance-wrapper span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.sector-performance-wrapper p {
+    font-size: 10px;
+}
+/* end of sector performance section */
+
+
+
+/* mix section  */
+
+ul:first-child {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.header-top {
+  position: absolute;
+  top: 8px;
+  left: 16px
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: white;
+  padding-left: 5px;
+  height: 22px;
+  padding-bottom: 0!important;
+  padding-top: 4px;
+  border-radius: 2px;
+}
+
+.market-view span, .footer-wrapper, .sector-two, .upcoming-wrapper,
+.performance-header p
+ {
+  color: #000;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+
+.header-one{
+    display: inline-block;
+    line-height: 20px !important;
+    margin-top: 4em;
+}
+
+.row-view {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+
+
+/* media query section*/
+
 @media (max-width: 767px) {
+
     .col-sm-equal {
         width: 50%;
         float: left;
@@ -206,6 +263,11 @@ ul:first-child {
         width: 50%;
         float: left;
     }
+
+    .col-sector-performance-2 {
+      width: 50%;
+      float: left;
+  }
 
     .earnings-wrapper ul {
         text-decoration: none;
@@ -225,7 +287,7 @@ ul:first-child {
         width: 20%;
         float: left;
     }
-    
+
     .col-sector-view {
         width: 50%;
         float: left;
@@ -235,6 +297,11 @@ ul:first-child {
         width: 30%;
         float: left;
     }
+
+    .col-sector-performance-2 {
+      width: 33%;
+      float: left;
+  }
 
     .earnings-wrapper ul {
         text-decoration: none;
@@ -262,6 +329,11 @@ ul:first-child {
         float: left;
     }
 
+    .col-sector-performance-2 {
+      width: 33%;
+      float: left;
+  }
+
     .earnings-wrapper ul {
         text-decoration: none;
     }
@@ -276,7 +348,6 @@ ul:first-child {
     .col-lg-equal {
         width: 10%;
         float: left;
-        max-width: 1130px;
     }
 
     .col-sector-view {
@@ -293,9 +364,14 @@ ul:first-child {
         float: left;
     }
 
+    .col-sector-performance-2 {
+      width: 33%;
+      float: left;
+  }
+
     .earnings-wrapper ul {
         list-style-type: none;
-        
+
     }
 
     .earnings-equal {
