@@ -9,7 +9,7 @@ import { AngularMaterialModule } from './Core/angular-material-module/angular-ma
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MarketViewData } from './Core/Services/market-view.data.service';
-import { CommonModule } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { HeaderComponent } from './Components/Shared Component/header/header.component';
 import { NewsDataService } from './Core/Services/news.data.service';
 
@@ -28,7 +28,10 @@ import { NewsDataService } from './Core/Services/news.data.service';
     HttpClientModule,
     CommonModule
   ],
-  providers: [MarketViewData, NewsDataService],
+  providers: [MarketViewData, NewsDataService,
+    {provide: APP_BASE_HREF, useValue: '/'}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
