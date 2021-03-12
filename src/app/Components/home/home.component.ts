@@ -14,29 +14,27 @@ export class HomeComponent implements OnInit {
   BearerToken = "HCETRP406LI4URMN";
 
   public marketBriefingData;
-  isPositive: boolean;
   public sectorPerfomanceImageOne = [];
   public sectorPerfomanceImageTwo = [];
   public sectorHighlight = [];
-
   public earnings = [];
 
   constructor(private _http: HttpClient, private _marketBriefingService: MarketViewData) { }
 
   ngOnInit(): void {
-    this.checkData().subscribe(
+    /*this.checkData().subscribe(
       data => {
         let dat = JSON.stringify(data);
         console.log(`returned data: ${dat}`);
-      });
+      });*/
     this.getMarketBriefing();
     this.getEarnings();
     this.getSectorPerfImages();
   }
 
-  checkData(): Observable<any> {
+ /* checkData(): Observable<any> {
     return this._http.get<any>(this.url, {headers: {Authorization: this.BearerToken}});
-  }
+  }*/
 
   getEarnings() {
     this.earnings = this._marketBriefingService.earnings;
@@ -52,18 +50,6 @@ export class HomeComponent implements OnInit {
 
   getMarketBriefing() {
     this.marketBriefingData = this._marketBriefingService.getMarketBriefing();
-    this.marketBriefingData.filter((item) => {
-      let percentage = parseFloat(item.percentage);
-      if(percentage >= 0 ){
-        this.isPositive = true;
-        console.log(`this is true: `, percentage);
-      }
-
-      if(percentage < 0 ) {
-        this.isPositive = false;
-        console.log( `this is for false: `, percentage);
-      }
-    })
   }
 
 
