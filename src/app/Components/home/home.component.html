@@ -1,0 +1,110 @@
+<div class="home-content-wrapper container">
+    <div class="container-fluid">
+        <div class="header-one">
+            <p class="market-view"><span>MARKET VIEW</span>
+                <br>
+                    <b style="font-size: 25px;">Today's market briefing.</b>
+            </p>
+        </div>
+    <div class="row market-card-wrapper">
+        <div class="col-sm-equal col-md-equal col-lg-equal column-wrapper"  *ngFor="let briefing of marketBriefingData" >
+            <div class="p-2 border bg-light">
+                <p>
+                    <b>{{briefing.organizationName}}</b>
+                    <br>
+                    <span style="font-size: 11px;">{{briefing.description}}</span>
+                    <br>
+                </p>
+                <div class="pt-stockprice">
+                    {{briefing.stockPrice}}
+                    <br>
+                    <span class="pt-percentage">
+                    {{briefing.percentage | percent}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-wrapper mt-1">
+            Active stocks last updated Dec 29 2020
+    </div>
+    <div class="row mt-3" style="padding-left: 0 !important;">
+        <div class="col-sm-12 col-md-9 sector-highlight-wrapper">
+            <p>
+                <span class="sector-one">
+                    Sector Highlights
+                </span>
+                <br>
+                <span class="sector-two">
+                    Active stocks last updated Dec 29 2020
+                </span>
+            </p>
+        <div class="col-sector-view">
+            <img src="../../../assets/sector-highlight/entertainment-so-real_web.jpg" class="img-fluid w-100" alt="Health Care">
+            <div class="header-top">Health Care</div>
+            <div class="footer-bottom">+{{0.46 | percent: '0.2'}}</div>
+        </div>
+        <div class="col-sector-view">
+            <img src="../../../assets/sector-highlight/music-to-life_web.jpg" class="img-fluid w-100"  alt="Industrials">
+            <div class="header-top">Industrials</div>
+            <div class="footer-bottom">{{-0.78 | percent: '0.2'}}</div>
+        </div>
+        </div>
+        <div class="col-sm-12 col-md-3 my-watch-wrapper">
+            <h3>
+                My watchlist <i class="fa fa-star" aria-hidden="true"></i>
+            </h3>
+            <p>
+                Your watchlist is empty. Build your watchlist 
+                by starring (<i class="fa fa-star text-primary"></i>) the stocks you want to follow.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- this is for the  dividens-->
+
+    <div class="ex-dividens-wrapper">
+        <h3>
+            <b>Ex-Dividends</b>
+        </h3>
+        <div class="sub-content">
+            <p> 
+                Symbol
+                <span class="mount">Amount</span>
+            </p>
+        </div>
+    </div>
+    <p style="font-size: 10px;">There are no upcoming dividens.</p>
+
+
+     <!-- this is for the  Earnings-->
+
+     <div class="earnings-wrapper">
+         <h4> Earnings </h4>
+         <div class="earnings-equal">
+             <ul class="earnings-equal"  *ngFor="let earning of earnings">
+                <li class="earning-item-wrapper">{{earning}}</li>
+             </ul>
+         </div>
+     </div>
+
+     <!--sector performance-->
+
+     <div class="sector-performance-wrapper">
+         <div class="performance-header">
+            <span>Sector Performance</span>
+            <p>
+                Dec 29 2020, 09:10:36 pm.
+            </p>
+         </div>
+        <div class="col-sector-performance" *ngFor="let sector of sectorPerfomanceImageOne">
+            <img src="{{sector.image}}" alt="sector Performance">
+            <div class="header-top">{{sector.name}}</div>
+            <div class="footer-bottom">+{{sector.percentage | percent}}</div>
+        </div>
+     </div>
+
+    </div>
+</div>

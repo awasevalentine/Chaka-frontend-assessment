@@ -1,0 +1,305 @@
+.home-content-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.p-2 p{
+    line-height: 15px;
+}
+
+.header-one{
+    display: inline-block;
+    line-height: 20px !important;
+}
+.market-card-wrapper {
+    padding: 2px !important;
+}
+.column-wrapper div{
+    height: 170px !important;
+}
+
+.footer-wrapper, .sector-two {
+    font-size: 10px;
+}
+
+.pt-stockprice {
+    padding-top: 5em;
+    text-align: end;
+    padding-bottom: 0!important;
+    line-height: 15px;
+}
+
+
+.pt-subheader {
+    margin: 0 !important;
+    padding-top: 0!important;
+    word-spacing: normal;
+}
+
+.col-sm-equal,
+.col-md-equal,
+.col-lg-equal {
+    position: relative;
+    min-height: 1px;
+    padding: 5px;
+}
+
+/* sector view column divison */
+
+.col-sector-view {
+    position: relative;
+    min-height: 1px;
+    padding: 5px;
+    
+}
+
+.row-view {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.sector-highlight-wrapper {
+    width: 100%;
+    line-height: 16px ;
+    padding-top: 20px;
+    border-top: solid 1px silver;
+}
+
+.sector-one, .my-watch-wrapper h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.my-watch-wrapper {
+    padding-top: 20px;
+}
+.my-watch-wrapper p {
+    line-height: 16px;
+}
+
+
+/* sector Performance column division */
+
+.col-sector-performance {
+    position: relative;
+    min-height: 1px;
+    padding: 7px;
+}
+
+.sector-performance-wrapper {
+    margin-top: 4.5em;
+    border-top: solid 1px silver;
+    padding-top: 8px;
+
+}
+
+.sector-performance-wrapper span {
+    font-size: 18px;
+    font-weight: bolder;
+    
+}
+
+.performance-header {
+    line-height: 16px;
+   
+}
+
+.sector-performance-wrapper p {
+    font-size: 10px;
+}
+
+.col-sector-performance img {
+    height: 100px !important;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 2px;
+    
+}
+
+/*earnings column division */
+
+.earnings-wrapper {
+    font-size: 10px;
+    padding-top: 4px;
+    margin-top: 4em;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    padding-bottom: 0 !important;
+}
+
+.earnings-wrapper ul {
+    list-style-type: none;
+}
+
+.earnings-wrapper h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.earnings-equal ul {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+ul:first-child {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.col-sector-view img {
+    height: 100px  !important;
+    max-width: 100%;
+    border-radius: 4px;
+
+}
+
+.col-sector-view:first-child{
+    padding-left: 0 !important;
+}
+
+.header-top {
+    position: absolute;
+    top: 8px;
+    left: 16px
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    background-color: green;
+    padding-left: 20px;
+}
+
+.row-view .header-top .footer-bottom {
+    background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+}
+
+.ex-dividens-wrapper {
+    padding-top: 5px;
+    border-top: solid 1px silver ;
+    border-bottom: solid 1px silver ;
+    margin-top: 30px;
+    padding-left: 0 !important;
+    width: 73%;
+}
+
+.sub-content span{
+    float: right
+}
+
+@media (max-width: 767px) {
+    .col-sm-equal {
+        width: 50%;
+        float: left;
+    }
+
+    .col-sector-view {
+        width: 50%;
+        float: left;
+    }
+
+    .col-sector-performance {
+        width: 50%;
+        float: left;
+    }
+
+    .earnings-wrapper ul {
+        text-decoration: none;
+    }
+
+    .earnings-equal {
+        display: block;
+    }
+
+    ul {
+        padding-left: 0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-sm-equal {
+        width: 20%;
+        float: left;
+    }
+    
+    .col-sector-view {
+        width: 50%;
+        float: left;
+    }
+
+    .col-sector-performance {
+        width: 30%;
+        float: left;
+    }
+
+    .earnings-wrapper ul {
+        text-decoration: none;
+    }
+
+    .earnings-equal {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-equal {
+        width: 10%;
+        float: left;
+    }
+
+    .col-sector-view {
+        width: 50%;
+        float: left;
+    }
+
+    .col-sector-performance {
+        width: 25%;
+        float: left;
+    }
+
+    .earnings-wrapper ul {
+        text-decoration: none;
+    }
+
+    .earnings-equal {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-equal {
+        width: 10%;
+        float: left;
+        max-width: 1130px;
+    }
+
+    .col-sector-view {
+        width: 50%;
+        float: left;
+    }
+    .col-earnings-equal {
+        width: 12.5%;
+        float: left;
+    }
+
+    .col-sector-performance {
+        width: 25%;
+        float: left;
+    }
+
+    .earnings-wrapper ul {
+        list-style-type: none;
+        
+    }
+
+    .earnings-equal {
+        display: flex;
+        flex-direction: row;
+    }
+}
