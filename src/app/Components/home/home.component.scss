@@ -51,9 +51,12 @@
 .sector-highlight-wrapper {
   width: 100%;
   line-height: 16px ;
-  padding-top: 20px;
-  border-top: solid 1px silver;
 
+
+}
+.inner-sector-wrapper {
+  border-top: solid 1px silver;
+  padding-top: 20px;
 }
 
 .sector-one, .my-watch-wrapper h3{

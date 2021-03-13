@@ -38,6 +38,7 @@
 
     <div class="row mt-3">
         <div class="col-sm-12 col-md-9 sector-highlight-wrapper">
+          <div class="inner-sector-wrapper">
             <p>
                 <span class="sector-one">
                     Sector Highlights
@@ -51,6 +52,7 @@
             <img src="{{sectorImage.image}}" class="img-fluid" alt="Health Care" width="100px">
             <div class="header-top">{{sectorImage.title}}</div>
             <div class="footer-bottom" [style.backgroundColor] = "compareValue(sectorImage.percentage)">{{sectorImage.percentage}}%</div>
+        </div>
         </div>
         </div>
         <div class="col-sm-12 col-md-3 my-watch-wrapper">
