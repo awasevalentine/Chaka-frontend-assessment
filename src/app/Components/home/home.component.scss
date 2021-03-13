@@ -248,11 +248,16 @@ ul:first-child {
 /* media query section*/
 
 @media (max-width: 767px) {
+  .container{
+    padding: 3px!important;
+  }
 
     .col-sm-equal {
         width: 50%;
         float: left;
+        padding-left: 0 !important;
     }
+
 
     .col-sector-view {
         width: 50%;
@@ -279,6 +284,16 @@ ul:first-child {
 
     ul {
         padding-left: 0 !important;
+    }
+
+    .container-fluid {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .market-card-wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
 }
 
