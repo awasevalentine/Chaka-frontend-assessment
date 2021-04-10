@@ -1,0 +1,84 @@
+<ul>
+  <li>
+    <a href="myanimation/#one">one</a>
+  </li>
+  <li>
+    <a href="myanimation/#two">two</a>
+  </li>
+  <li>
+    <a href="myanimation/#three">three</a>
+  </li>
+</ul>
+
+<div id="container" [@listAnimation]="items.length">
+
+  <button (click) ="pushItem()">Add Item</button>
+  <button (click) ="removeItem()">Remove Item</button>
+
+  <div id="list" *ngFor="let item of items">
+    {{item}}
+  </div>
+
+
+</div>
+<div @explainerAnim id="one">
+  <div class="col">
+    <p>this is my column seperation</p>
+  </div>
+  <div class="col">
+    <p>this is my column seperation </p>
+  </div>
+  <div class="col">
+    <p>this is my column seperation</p>
+  </div>
+</div>
+
+<button (click)="toogleShow()">Show</button>
+<div class="myworld" *ngIf="show" @fadeInOut>
+  <p>Welcome to my world</p>
+</div>
+
+<div [@queryShake]=items.length class="container" id="two">
+  <div class="card"  *ngFor="let item of items" >
+    {{item}}
+  </div>
+
+</div>
+<button (click) ="pushItem()">Add Item</button>
+  <button (click) ="removeItem()">Remove Item</button>
+<div [@letStagger]=items.length class="container mee">
+  <div *ngFor="let item of items" >
+    {{item}}
+  </div>
+
+</div>
+
+
+
+<div @fadeInGlow class="me" id="three">
+  <div>oh yeah</div>
+  <div>oh yeah</div>
+  <div>oh yeah</div>
+  <div>oh yeah</div>
+
+
+</div>
+
+<button (click)='green()'>Change Color</button>
+<div class="changeRed"  [@changeColor]="isGreen">
+
+</div>
+
+<div class="mt-3">
+  <h1>Angular client for a WebSocket server</h1>
+  <div *ngFor="let item of messageFromServer">
+    {{item}}
+  </div>
+ <br>
+  <button (click)="sendMessageToServer()">Send Message to Server</button>
+  <button (click)="closeSocket()">Disconnect</button>
+
+  <div class="mt-5">{{status}}</div>
+
+
+</div>
